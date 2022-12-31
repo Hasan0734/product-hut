@@ -14,8 +14,8 @@ const items = [
 
 function NavItems() {
   return (
-    <div className='hidden md:block'>
-      <ul className='flex gap-x-10 items-center'>
+    <>
+      <ul className='flex flex-col lg:flex-row gap-x-5 xl:gap-x-10 lg:items-center'>
         {
           items.map((item: any) => <li key={item.id}>
             <Link href={item.url} legacyBehavior>
@@ -25,7 +25,7 @@ function NavItems() {
         }
 
       </ul>
-    </div>
+    </>
   )
 }
 
