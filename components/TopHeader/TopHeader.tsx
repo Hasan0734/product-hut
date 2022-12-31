@@ -9,8 +9,8 @@ function TopHeader() {
         <>
             <div className='bg-[#7E33E0] py-2'>
 
-                <div className='container mx-auto px-4'>
-                    <div className='flex items-center justify-between '>
+                <div className='container mx-auto px-4 top-header'>
+                    <div className='flex items-center justify-between f'>
                         <div className='hidden md:block'>
                             <div className='flex gap-x-6 items-center'>
                                 <div className='flex gap-x-3 text-xs'>

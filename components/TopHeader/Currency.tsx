@@ -10,15 +10,15 @@ const currencies = [
 
 function Currency() {
 
-  return (
-      <>
-        
-          <div className='hidden sm:block'>
-                  <SelectOption options={currencies} />
-              </div>   
-          
-    </>
-  )
+    return (
+        <>
+
+            <div className='hidden sm:block'>
+                <SelectOption options={currencies} />
+            </div>
+
+        </>
+    )
 }
 
 export default Currency
