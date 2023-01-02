@@ -21,3 +21,10 @@ sans-serif; */
     font-family: 'Lato', sans-serif;
 
 }
+
+.blog_card:hover .blog_title{
+    color: #FB2E86;
+}
+.blog_card:hover .read_more{
+    color: #FB2E86;
+}
