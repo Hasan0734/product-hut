@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Drawer from '../components/Drawer/Drawer';
 import Footer from '../components/Footer/Footer';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
+import LatestUpdateBySubcribe from '../components/LatestUpdateBySubcribe/LatestUpdateBySubcribe';
 import Navbar from '../components/Navbar/Navbar';
 import TopHeader from '../components/TopHeader/TopHeader';
 
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <LatestUpdateBySubcribe/>
         <LatestBlog/>
         <Footer />
 

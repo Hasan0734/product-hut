@@ -5,7 +5,7 @@ import LatestBlogCard from '../Cards/LatestBlogCard';
 const LatestBlog = () => {
     return (
         <div className='py-20'>
-            <div className='container px-4'>
+            <div className='container px-4 mx-auto'>
                 <h2 className='text-center text-[28px] font-bold  leading-[32px] text-[#151875] josefin-font'>Latest Blog</h2>
                 <div className='mt-12'>
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'>

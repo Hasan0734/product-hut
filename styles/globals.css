@@ -28,3 +28,11 @@ sans-serif; */
 .blog_card:hover .read_more{
     color: #FB2E86;
 }
+
+.latest_update_scribe{
+   background-image: url(/assets/bg-1.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* background-position: 100% 100%; */
+   background-position: center;
+}
