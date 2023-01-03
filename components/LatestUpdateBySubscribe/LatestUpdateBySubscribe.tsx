@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 
-const LatestUpdateBySubcribe = () => {
+const LatestUpdateBySubscribe = () => {
     return (
-        <section className='latest_update_scribe py-20'>
+        <section className='latest_update_scribe py-28'>
             <div className='container px-4 mx-auto'>
                 <div className='text-center'>
                     <h2 className='text-[#151875] text-xl leading-7 md:text-[28px] md:leading-10 font-bold josefin-font'>Get Leatest Update By Subscribe <br/>
@@ -21,4 +21,4 @@ const LatestUpdateBySubcribe = () => {
     );
 };
 
-export default LatestUpdateBySubcribe;
+export default LatestUpdateBySubscribe;

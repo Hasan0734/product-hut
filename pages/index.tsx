@@ -3,8 +3,9 @@ import Head from 'next/head'
 import Drawer from '../components/Drawer/Drawer';
 import Footer from '../components/Footer/Footer';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
-import LatestUpdateBySubcribe from '../components/LatestUpdateBySubcribe/LatestUpdateBySubcribe';
+import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
 import Navbar from '../components/Navbar/Navbar';
+import TopCategories from '../components/TopCategries/TopCategories';
 import TopHeader from '../components/TopHeader/TopHeader';
 
 
@@ -20,7 +21,8 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
-        <LatestUpdateBySubcribe/>
+        <TopCategories/>
+        <LatestUpdateBySubscribe/>
         <LatestBlog/>
         <Footer />
 
