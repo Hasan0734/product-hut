@@ -1,14 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
 
-const TopCategoryCard = () => {
+interface cardProps {
+    category: any
+}
+
+const TopCategoryCard = ({ category }: cardProps) => {
     return (
         <>
             <div className='top_cate_card'>
                 <div className='flex justify-center'>
                     <div className='bg-[#F6F7FB] rounded-full p-8 h-[220px] w-[220px] top_cat_img transition-all duration-300'>
                         <Link href={"/"}>
-                            <img className='w-full' src="/assets/categories/image 20.png" alt="" />
+                            <img className='w-full' src={category.image} alt="" />
                         </Link>
                     </div>
                 </div>
