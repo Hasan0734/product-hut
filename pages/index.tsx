@@ -5,6 +5,7 @@ import Drawer from '../components/Drawer/Drawer';
 import Footer from '../components/Footer/Footer';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
+import LeatestProducts from '../components/LeatestProducts/LeatestProducts';
 import Navbar from '../components/Navbar/Navbar';
 import ShopexOffer from '../components/ShopexOffer/ShopexOffer';
 import TopCategories from '../components/TopCategries/TopCategories';
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <LeatestProducts/>
         <ShopexOffer/>
         <UniqueProduct/>
         <TrendingProducts/>
