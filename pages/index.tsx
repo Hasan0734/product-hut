@@ -8,6 +8,7 @@ import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/Lates
 import Navbar from '../components/Navbar/Navbar';
 import TopCategories from '../components/TopCategries/TopCategories';
 import TopHeader from '../components/TopHeader/TopHeader';
+import TrendingProducts from '../components/TrendingProducts/TrendingProducts';
 
 
 const Home: NextPage = () => {
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <TrendingProducts/>
         <DiscountItems/>
         <TopCategories/>
         <LatestUpdateBySubscribe/>
