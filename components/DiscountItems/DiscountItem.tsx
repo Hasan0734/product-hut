@@ -41,9 +41,9 @@ const DiscountItem = ({ item, selected }: itemProps) => {
                 </Link>
             </div>
             <div className='flex justify-center items-center order-1 lg:order-2'>
-                <div className='bg-[#FCECF1] w-[300px] relative h-[300px] p-5 rounded-full flex justify-center items-center'>
-                    <div className='absolute w-[400px]'>
-                        <Image width={400} height={300} src={item.image} alt={selected} />
+                <div className='bg-[#FCECF1] w-[200px] h-[200px] sm:w-[300px] relative sm:h-[300px] p-5 rounded-full flex justify-center items-center'>
+                    <div className='absolute w-[300px] sm:w-[400px]'>
+                        <img className='w-[300px] sm:w-[400px]'  src={item.image} alt={selected} />
 
                     </div>
                 </div>

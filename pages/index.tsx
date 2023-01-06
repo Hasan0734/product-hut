@@ -6,6 +6,7 @@ import Footer from '../components/Footer/Footer';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
 import Navbar from '../components/Navbar/Navbar';
+import ShopexOffer from '../components/ShopexOffer/ShopexOffer';
 import TopCategories from '../components/TopCategries/TopCategories';
 import TopHeader from '../components/TopHeader/TopHeader';
 import TrendingProducts from '../components/TrendingProducts/TrendingProducts';
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <ShopexOffer/>
         <UniqueProduct/>
         <TrendingProducts/>
         <DiscountItems/>
