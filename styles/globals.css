@@ -61,3 +61,7 @@ sans-serif; */
     border: 1px solid #FB2E86;
     background: #FB2E86;
 }
+
+.leastest_p_card:hover .leastest_p_add{
+    left: 0;
+}
