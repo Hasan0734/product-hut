@@ -12,7 +12,7 @@ interface itemProps {
         link: string,
         image: string
     },
-    selected:string
+    selected: string
 }
 
 const DiscountItem = ({ item, selected }: itemProps) => {
@@ -25,7 +25,7 @@ const DiscountItem = ({ item, selected }: itemProps) => {
                     </h3>
                     <h5 className='text-[#FB2E86] text-xl leading-8 josefin-font my-2'>{item.company}</h5>
                 </div>
-                <div className='my-4'>
+                <div className='my-5'>
                     <p className='text-[#B7BACB] font-sm lato-font leading-8'>
                         {item.description}
                     </p>
@@ -37,7 +37,7 @@ const DiscountItem = ({ item, selected }: itemProps) => {
                     </ul>
                 </div>
                 <Link href={item.link} legacyBehavior>
-                    <button className='bg-[#FB2E86] px-7 py-[10px] text-white rounded-sm josefin-font text-sm'>Shop Now</button>
+                    <a className='bg-[#FB2E86] px-7 py-3 text-white rounded-sm josefin-font text-sm'>Shop Now</a>
                 </Link>
             </div>
             <div className='flex justify-center items-center order-1 lg:order-2'>
