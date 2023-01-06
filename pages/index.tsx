@@ -9,6 +9,7 @@ import Navbar from '../components/Navbar/Navbar';
 import TopCategories from '../components/TopCategries/TopCategories';
 import TopHeader from '../components/TopHeader/TopHeader';
 import TrendingProducts from '../components/TrendingProducts/TrendingProducts';
+import UniqueProduct from '../components/UniqueProduct/UniqueProduct';
 
 
 const Home: NextPage = () => {
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <UniqueProduct/>
         <TrendingProducts/>
         <DiscountItems/>
         <TopCategories/>
