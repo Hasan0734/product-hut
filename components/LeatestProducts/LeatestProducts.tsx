@@ -65,7 +65,7 @@ const LeatestProducts = () => {
                  josefin-font'>Leatest Products</h2>
                 </div>
                 <div className='flex justify-center my-4'>
-                    <ul className='flex gap-5'>
+                    <ul className='flex gap-5 flex-wrap'>
                         {items.map((item: any) => <li
                             onClick={() => setSelectedItem(item.slug)}
                             key={item.id}

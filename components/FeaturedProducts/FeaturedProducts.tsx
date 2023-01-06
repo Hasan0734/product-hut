@@ -7,8 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import "swiper/css/pagination";
 import TopCategoryCard from '../Cards/TopCategoryCard';
-
-
+import FeaturedPCard from '../Cards/FeaturedPCard';
 
 const categories = [
     { id: 1, name: "", image: "/assets/categories/image 20.png" },
@@ -24,23 +23,22 @@ const categories = [
     { id: 11, name: "", image: "/assets/categories/image 1168.png" },
     { id: 12, name: "", image: "/assets/categories/image 20.png" },
 ]
-
-const TopCategories = () => {
+const FeaturedProducts = () => {
     return (
-        <section className='py-20'>
+        <section className='py-10'>
             <div className='container px-4 mx-auto'>
                 {/* section title */}
                 <div>
                     <h2 className='text-center text-[28px] font-bold  
                 leading-[32px] text-[#151875]
-                 josefin-font'>Top Categories</h2>
+                 josefin-font'>Featured Products</h2>
                 </div>
 
                 {/* carousel */}
                 <div className='mt-12'>
                     <Swiper
                         slidesPerView={1}
-                        spaceBetween={10}
+                        spaceBetween={50}
                         slidesPerGroup={1}
                         autoplay={{
                             delay: 2500,
@@ -53,29 +51,29 @@ const TopCategories = () => {
                             640: {
                                 slidesPerView: 2,
                                 slidesPerGroup: 2,
-                                spaceBetween: 20,
+                                spaceBetween: 50,
                             },
                             768: {
                                 slidesPerView: 3,
                                 slidesPerGroup: 3,
-                                spaceBetween: 10,
+                                spaceBetween: 50,
                             },
                             1024: {
                                 slidesPerView: 4,
                                 slidesPerGroup: 4,
-                                spaceBetween: 10,
+                                spaceBetween: 50,
                             },
                         }}
                         pagination={{
                             clickable: true,
-                            bulletActiveClass: "top_cate_paginate_bullet_active",
-                            bulletClass: "top_cate_paginate_bullet"
+                            bulletActiveClass: "featured_paginate_bullet_active",
+                            bulletClass: "featured_paginate_bullet"
                         }}
-                        modules={[Autoplay, Pagination]}
-                        className="top_category"
+                        modules={[Pagination]}
+                        className="featured_section"
                     >
                         {categories.map((cate, i) => <SwiperSlide key={cate.id}>
-                            <TopCategoryCard category={cate} />
+                            <FeaturedPCard category={cate} />
                         </SwiperSlide>)}
 
 
@@ -85,8 +83,7 @@ const TopCategories = () => {
                 </div>
             </div>
         </section>
-
     );
 };
 
-export default TopCategories;
+export default FeaturedProducts;

@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import DiscountItems from '../components/DiscountItems/DiscountItems';
 import Drawer from '../components/Drawer/Drawer';
+import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
 import Footer from '../components/Footer/Footer';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <FeaturedProducts/>
         <LeatestProducts/>
         <ShopexOffer/>
         <UniqueProduct/>
