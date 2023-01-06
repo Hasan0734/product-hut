@@ -69,16 +69,12 @@ const FeaturedProducts = () => {
                             bulletActiveClass: "featured_paginate_bullet_active",
                             bulletClass: "featured_paginate_bullet"
                         }}
-                        modules={[Pagination]}
+                        modules={[Autoplay, Pagination]}
                         className="featured_section"
                     >
                         {categories.map((cate, i) => <SwiperSlide key={cate.id}>
                             <FeaturedPCard category={cate} />
                         </SwiperSlide>)}
-
-
-
-
                     </Swiper>
                 </div>
             </div>

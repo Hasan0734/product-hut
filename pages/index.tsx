@@ -4,6 +4,7 @@ import DiscountItems from '../components/DiscountItems/DiscountItems';
 import Drawer from '../components/Drawer/Drawer';
 import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
 import Footer from '../components/Footer/Footer';
+import HeaderBanner from '../components/HeaderBanner/HeaderBanner';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
 import LeatestProducts from '../components/LeatestProducts/LeatestProducts';
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
       <Drawer>
         <TopHeader />
         <Navbar />
+        <HeaderBanner/>
         <FeaturedProducts/>
         <LeatestProducts/>
         <ShopexOffer/>
