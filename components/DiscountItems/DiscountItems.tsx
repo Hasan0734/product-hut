@@ -1,6 +1,34 @@
-import Image from 'next/image';
+
 import React, { useState } from 'react';
-import { CheckIcon } from '@heroicons/react/24/outline';
+import DiscountItem from './DiscountItem';
+
+const woodChair = {
+    discount: 20,
+    title: "All Products",
+    company: "Eams Sofa Compact",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.",
+    features: ["Material expose like metals", "Clear lines and geomatric figures", "Simple neutral colours.", "Material expose like metals"],
+    link: "/",
+    image: "/assets/discount/wood-chair.png"
+}
+const plastic = {
+    discount: 30,
+    title: "All Products",
+    company: "RFL Ltd.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.",
+    features: ["Material expose like metals", "Clear lines and geomatric figures", "Simple neutral colours.", "Material expose like metals"],
+    link: "/",
+    image: "/assets/discount/plastic.png"
+}
+const sofa = {
+    discount: 50,
+    title: "All Products",
+    company: "Eams Sofa Compact",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.",
+    features: ["Material expose like metals", "Clear lines and geomatric figures", "Simple neutral colours.", "Material expose like metals"],
+    link: "/",
+    image: "/assets/discount/sofa.png"
+}
 
 const DiscountItems = () => {
     const [selected, setSelected] = useState("woodChair");
@@ -41,36 +69,12 @@ const DiscountItems = () => {
                 </div>
 
                 <div className='mt-10'>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 '>
-                        <div>
-                            <div className='mt-10'>
-                                <h3 className='text-[#151875] josefin-font text-3xl font-bold leading-9'>
-                                    20% Discount Of All Products
-                                </h3>
-                                <h5 className='text-[#FB2E86] text-xl leading-8 josefin-font my-2'>Eams Sofa Compact</h5>
-                            </div>
-                            <div className='my-4'>
-                                <p className='text-[#B7BACB] font-sm lato-font leading-8'>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.
-                                </p>
-                                <ul className='grid grid-cols-2 mt-5'>
-                                    <li className='text-[#B7BACB] font-sm lato-font leading-8 flex gap-x-2'><CheckIcon color="#000" width={15} /> Material expose like metals</li>
-                                    <li className='text-[#B7BACB] font-sm lato-font leading-8 flex gap-x-2'><CheckIcon color="#000" width={15} /> Clear lines and geomatric figures</li>
-                                    <li className='text-[#B7BACB] font-sm lato-font leading-8 flex gap-x-2'><CheckIcon color="#000" width={15} /> Simple neutral colours.</li>
-                                    <li className='text-[#B7BACB] font-sm lato-font leading-8 flex gap-x-2'><CheckIcon color="#000" width={15} /> Material expose like metals</li>
-                                </ul>
-                            </div>
-                            <button className='bg-[#FB2E86] px-7 py-[10px] text-white rounded-sm josefin-font text-sm'>Shop Now</button>
-                        </div>
-                        <div className='flex justify-center items-center'>
-                            <div className='bg-[#FCECF1] w-[300px] relative h-[300px] p-5 rounded-full flex justify-center items-center'>
-                                <div className='absolute w-[500px]'>
-                                    <Image width={500} height={300} src={"/assets/discount/wood-chair.png"} alt='wood chair' />
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    {selected === "woodChair" && <DiscountItem item={woodChair} selected={selected} />}
+                    {selected === "plasticChair" && <DiscountItem item={plastic} selected={selected} />}
+                    {selected === "sofa" && <DiscountItem item={sofa} selected={selected} />}
+
                 </div>
             </div>
         </section>
