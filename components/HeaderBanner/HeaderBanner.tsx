@@ -1,28 +1,56 @@
 import Link from 'next/link';
 import React from 'react';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+import { Pagination, Autoplay } from "swiper";
+import "swiper/css/pagination";
+import Banner from '../Promotional/Banner';
+
 const HeaderBanner = () => {
     return (
-        <section className='bg-[#F2F0FF] py-5'>
-            <div className='container px-4 mx-auto'>
-                <div className='flex items-center gap-6'>
-                    <div>
-                        <div className='max-w-md'>
-                            <p className='text-[#FB2E86] text-sm leading-6'>Best Furniture For Your Castle....</p>
-                            <h2 className='text-3xl josefin-font text-black font-bold leading-10 mt-4'>New Furniture Collection
-                            </h2>
-                            <h2 className='text-3xl josefin-font text-black font-bold leading-10 mt-4'> Trends in 2023</h2>
-                            <p className='text-sm leading-6 mt-4 mb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
-                                in phasellus non in justo.</p>
-                            <Link href={"/"} legacyBehavior>
-                                <a className='text-white bg-[#FB2E86] px-7 py-3 rounded-sm inline-block'>Shop Now</a>
-                            </Link>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="/assets/banner/banner.png" alt="" />
-                    </div>
-                </div>
+        <section className='bg-[#F2F0FF] '>
+            <div className='container pl-4 mx-auto'>
+
+
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={40}
+                    slidesPerGroup={1}
+                    speed={1500}
+                    loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        waitForTransition: true,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+
+                    }}
+
+                    pagination={{
+                        clickable: true,
+                        bulletActiveClass: "banner_paginate_bullet_active",
+                        bulletClass: "banner_paginate_bullet"
+                    }}
+                    modules={[Autoplay, Pagination]}
+                    className="header_banner"
+                >
+                    <SwiperSlide >
+                        <Banner />
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <Banner />
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <Banner />
+                    </SwiperSlide>
+
+
+
+
+                </Swiper>
+
             </div>
         </section>
     );

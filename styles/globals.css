@@ -115,3 +115,26 @@ sans-serif; */
     background: #FB2E86;
     width: 24px;
 }
+
+.discount_mark{
+    border-radius: 32% 68% 39% 61% / 69% 46% 54% 31%;
+}
+
+.header_banner{
+    padding: 70px 0 !important;
+}
+.banner_paginate_bullet {
+    width: 10px;
+    height: 10px;
+    /* border-radius: 50%; */
+    border: 1px solid #FB2E86;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.banner_paginate_bullet_active {
+    border: 1px solid #FB2E86;
+    background: #FB2E86;
+}
