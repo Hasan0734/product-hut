@@ -42,13 +42,15 @@ const TopCategories = () => {
                         slidesPerView={1}
                         spaceBetween={10}
                         slidesPerGroup={1}
+                        speed={1500}
+                        loop={true}
                         autoplay={{
                             delay: 2500,
                             waitForTransition: true,
                             disableOnInteraction: false,
+                            pauseOnMouseEnter: true
 
                         }}
-
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,

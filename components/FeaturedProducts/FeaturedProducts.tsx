@@ -40,10 +40,13 @@ const FeaturedProducts = () => {
                         slidesPerView={1}
                         spaceBetween={50}
                         slidesPerGroup={1}
+                        speed={1500}
+                        loop={true}
                         autoplay={{
                             delay: 2500,
                             waitForTransition: true,
                             disableOnInteraction: false,
+                            pauseOnMouseEnter: true
 
                         }}
 

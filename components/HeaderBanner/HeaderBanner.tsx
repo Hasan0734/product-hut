@@ -5,7 +5,7 @@ const HeaderBanner = () => {
     return (
         <section className='bg-[#F2F0FF] py-5'>
             <div className='container px-4 mx-auto'>
-                <div className='flex items-center justify-between gap-6'>
+                <div className='flex items-center gap-6'>
                     <div>
                         <div className='max-w-md'>
                             <p className='text-[#FB2E86] text-sm leading-6'>Best Furniture For Your Castle....</p>
