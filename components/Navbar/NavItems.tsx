@@ -5,11 +5,11 @@ import React from 'react'
 const items = [
 
   { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "Pages", url: "/" },
-  { id: 3, title: "Products", url: "/" },
-  { id: 4, title: "Blog", url: "/" },
-  { id: 5, title: "Shop", url: "/" },
-  { id: 6, title: "Contact", url: "/" },
+  { id: 2, title: "Pages", url: "/pages" },
+  { id: 3, title: "Products", url: "/products" },
+  { id: 4, title: "Blogs", url: "/blogs" },
+  { id: 5, title: "Shops", url: "/shops" },
+  { id: 6, title: "Contact", url: "/contact-us" },
 ]
 
 function NavItems() {

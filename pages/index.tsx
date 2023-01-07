@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 import HeaderBanner from '../components/HeaderBanner/HeaderBanner';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
+import Layout from '../components/Layout/Layout';
 import LeatestProducts from '../components/LeatestProducts/LeatestProducts';
 import Navbar from '../components/Navbar/Navbar';
 import ShopexOffer from '../components/ShopexOffer/ShopexOffer';
@@ -25,22 +26,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Drawer>
-        <TopHeader />
-        <Navbar />
-        <HeaderBanner/>
-        <FeaturedProducts/>
-        <LeatestProducts/>
-        <ShopexOffer/>
-        <UniqueProduct/>
-        <TrendingProducts/>
-        <DiscountItems/>
-        <TopCategories/>
-        <LatestUpdateBySubscribe/>
-        <LatestBlog/>
-        <Footer />
-
-      </Drawer>
+      <Layout>
+        <HeaderBanner />
+        <FeaturedProducts />
+        <LeatestProducts />
+        <ShopexOffer />
+        <UniqueProduct />
+        <TrendingProducts />
+        <DiscountItems />
+        <TopCategories />
+        <LatestUpdateBySubscribe />
+        <LatestBlog />
+      </Layout>
 
 
     </>
