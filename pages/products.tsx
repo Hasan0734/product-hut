@@ -150,11 +150,11 @@ const Products = () => {
             <PageLocation />
 
             <section className='py-20'>
-                <div className='container px-4 mx-auto relative'>
+                <div className='container px-4 mx-auto relative bg-white'>
 
                     <ProductViewType toggle={toggle} setToggle={setToggle} layout={layout} setLayout={setLayout} />
 
-                    <div className='flex gap-5'>
+                    <div className='block lg:flex gap-5'>
                         <div
                             className={`${toggle ? " hidden lg:block " : " hidden "} bg-white py-5 sticky top-24 z-20 h-screen  scrollbar-thin  scrollbar-hide scrollbar-rounded-lg scrollbar-thumb-blue-100 scrollbar-track-gray-100 w-[300px]`}>
                             <Filter />
