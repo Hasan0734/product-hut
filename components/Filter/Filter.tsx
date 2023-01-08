@@ -8,13 +8,15 @@ import RatingItem from './RatingItem';
 
 const Filter = () => {
     return (
-        <div className='flex flex-col gap-5'>
-            <ProductBrand /> 
-            <DiscountOffer />
-            <RatingItem />
-            <Categories />
-            <PriceRange />
-            <ByColor/>
+        <div className='pb-20'>
+            <div className='flex flex-col gap-5 '>
+                <ProductBrand />
+                <DiscountOffer />
+                <RatingItem />
+                <Categories />
+                <PriceRange />
+                <ByColor />
+            </div>
         </div>
     );
 };

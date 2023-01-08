@@ -4,7 +4,8 @@ import { Squares2X2Icon } from '@heroicons/react/24/solid';
 
 const ProductViewType = ({ layout, setLayout }: any) => {
     return (
-        <div className='flex justify-between flex-col lg:flex-row py-7 gap-5 items-start sticky top-0 bg-white z-30'>
+        // sticky top - 0
+        <div className='flex justify-between flex-col lg:flex-row py-7 gap-5 items-start  sticky top-0 bg-white z-30'>
             <div>
                 <h2 className='text-[#151875] text-xl font-bold  josefin-font leading-8'>Ecommerce Acceories & Fashion item </h2>
                 <p className='text-xs '>About 9,620 results (0.62 seconds)</p>

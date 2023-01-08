@@ -14,7 +14,7 @@ const ProductRowCard = ({product}:any) => {
             </div>
             <div className='max-w-md px-4 sm:px-0'>
                 <div className='flex gap-4 items-center '>
-                    <h1 className="josefin-font text-xl font-bold text-[#111C85] leading-7">Accumsan tincidunt</h1>
+                    <h1 className="josefin-font text-xl font-bold text-[#111C85] leading-7">{ product.name}</h1>
                     <ul className='flex gap-3 items-center'>
                         <li className='w-3 h-3 bg-[#DE9034] rounded-full'></li>
                         <li className='w-3 h-3 bg-[#E60584] rounded-full'></li>
