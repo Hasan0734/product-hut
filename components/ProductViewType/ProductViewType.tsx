@@ -1,8 +1,9 @@
 import React from 'react';
-import { ListBulletIcon } from '@heroicons/react/24/outline';
+import { ListBulletIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline';
 import { Squares2X2Icon } from '@heroicons/react/24/solid';
 
-const ProductViewType = ({ layout, setLayout }: any) => {
+const ProductViewType = ({ layout, setLayout, toggle, setToggle }: any) => {
+
     return (
         // sticky top - 0
         <div className='flex justify-between flex-col lg:flex-row py-7 gap-5 items-start  sticky top-0 bg-white z-30'>
@@ -39,13 +40,13 @@ const ProductViewType = ({ layout, setLayout }: any) => {
                 <div className='flex items-center gap-3'>
                     <input className='border px-2 py-1 text-sm bg-white rounded-sm max-w-full md:max-w-[150px]' type="text" placeholder='Search by name' />
                 </div>
-                <div className="flex items-center gap-2">
-                    <label className="label cursor-pointer flex gap-2">
-                        <span className="label-text">Filter: </span>
-                    </label>
-
-                        
-                        <input type="checkbox" className="toggle bg-white" />
+                <div className="">
+                    <button
+                        onClick={() => setToggle(!toggle)}
+                        className={` ${toggle ? "bg-pink-500 text-white " : "bg-gray-100 text-black hover:bg-pink-500 hover:text-white"} border px-2 py-2 rounded-md flex gap-1 items-center`}>
+                        <AdjustmentsHorizontalIcon width={20} />
+                        Filter
+                    </button>
                 </div>
             </div>
         </div>

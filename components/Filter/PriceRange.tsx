@@ -10,7 +10,7 @@ const prices = [
 const PriceRange = () => {
     return (
         <div className=''>
-            <h3 className='underline text-[#151875] text-xl font-bold josefin-font underline-offset-4 leading-10'>Discount Offer</h3>
+            <h3 className='underline text-[#151875] text-xl font-bold josefin-font underline-offset-4 leading-10'>Price Range</h3>
             <ul>
                 {prices.map((price: any) => <li key={price.id} className='flex gap-2 items-center'>
                     <div className="form-control">

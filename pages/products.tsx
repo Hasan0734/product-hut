@@ -142,6 +142,7 @@ const products = [
 const Products = () => {
 
     const [layout, setLayout] = useState("list");
+    const [toggle, setToggle] = useState(false)
 
     return (
         <Layout>
@@ -151,16 +152,15 @@ const Products = () => {
             <section className='py-20'>
                 <div className='container px-4 mx-auto relative'>
 
-                    <ProductViewType layout={layout} setLayout={setLayout} />
+                    <ProductViewType toggle={toggle} setToggle={setToggle} layout={layout} setLayout={setLayout} />
 
                     <div className='flex gap-5'>
-                        <div className='bg-white py-5 sticky top-24 z-20 h-screen  scrollbar-thin  scrollbar-hide scrollbar-rounded-lg scrollbar-thumb-blue-100 scrollbar-track-gray-100 w-[300px] hidden lg:block '>
+                        <div
+                            className={`${toggle ? " hidden lg:block " : " hidden "} bg-white py-5 sticky top-24 z-20 h-screen  scrollbar-thin  scrollbar-hide scrollbar-rounded-lg scrollbar-thumb-blue-100 scrollbar-track-gray-100 w-[300px]`}>
                             <Filter />
                         </div>
-                        {/* <div className='w-[300px] bg-gray-300 hidden lg:block sticky top-32'>
-                           <Filter/>
-                        </div> */}
-                        <div className={`grid ${layout === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" : "grid-cols-1"} gap-6 static`}>
+
+                        <div className={`grid ${layout === "grid" ? `grid-cols-1 md:grid-cols-2 ${toggle ? "lg:grid-cols-3" : "lg:grid-cols-4"}` : "grid-cols-1"} gap-6 static`}>
                             {
                                 layout === "grid" && products.map((product) => <ProductGridCard key={product.id} product={product} />)
                             }
@@ -170,7 +170,7 @@ const Products = () => {
 
                         </div>
                     </div>
-                   
+
                 </div>
             </section>
 
