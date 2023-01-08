@@ -5,6 +5,7 @@ import ProductGridCard from '../components/Cards/ProductGridCard';
 import PageLocation from '../components/PageLocation/PageLocation';
 import ProductViewType from '../components/ProductViewType/ProductViewType';
 import ProductRowCard from '../components/Cards/ProductRowCard';
+import Filter from '../components/Filter/Filter';
 
 const products = [
     {
@@ -140,7 +141,7 @@ const products = [
 
 const Products = () => {
 
-    const [layout, setLayout] = useState("grid");
+    const [layout, setLayout] = useState("list");
 
     return (
         <Layout>
@@ -148,18 +149,24 @@ const Products = () => {
             <PageLocation />
 
             <section className='py-20'>
-                <div className='container px-4 mx-auto'>
+                <div className='container px-4 mx-auto relative'>
 
                     <ProductViewType layout={layout} setLayout={setLayout} />
-                    <div className={`grid ${layout === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" : "grid-cols-1"} gap-6`}>
-                        {
-                            layout === "grid" && products.map((product) => <ProductGridCard key={product.id} product={product} />)
-                        }
-                        {
-                            layout === "list" && products.map((product) => <ProductRowCard key={product.id} product={product} />)
-                        }
-                       
+                    <div className='flex relative gap-5'>
+                        <div className='w-[300px]   sticky top-16 hidden lg:block overflow-scroll'>
+                           <Filter/>
+                        </div>
+                        <div className={`grid ${layout === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4" : "grid-cols-1"} gap-6`}>
+                            {
+                                layout === "grid" && products.map((product) => <ProductGridCard key={product.id} product={product} />)
+                            }
+                            {
+                                layout === "list" && products.map((product) => <ProductRowCard key={product.id} product={product} />)
+                            }
+
+                        </div>
                     </div>
+                   
                 </div>
             </section>
 
