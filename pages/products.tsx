@@ -141,24 +141,52 @@ const products = [
 
 const Products = () => {
 
-    const [layout, setLayout] = useState("list");
+    const [layout, setLayout] = useState("grid");
     const [toggle, setToggle] = useState(false)
+    const [smallFilter, setSmallFilter] = useState(false)
+
 
     return (
         <Layout>
 
-            <PageLocation />
+            <PageLocation >
+
+                <div>
+                    <h2 className='josefin-font text-[#101750] text-xl md:text-3xl font-bold leading-10'>
+                        {layout === "grid" ? "Product Grid Default" : "Product List"}
+                        {toggle && " With Sidebar"}
+                    </h2>
+                    <ul className='flex gap-x-2'>
+                        <li className='text-black text-sm '>
+                            Home &gt;
+                        </li >
+                        <li className='text-black text-sm '>
+                            Pages &gt;
+                        </li>
+                        <li className='text-pink-600 text-sm '>
+                            {layout === "grid" ? "Product Grid Default" : "Product List"}
+                            {toggle && " With Sidebar"}
+                        </li>
+                    </ul>
+                </div>
+            </PageLocation>
 
             <section className='py-8 lg:py-20'>
-                <div className='container px-4 mx-auto relative bg-white'>
+                <div className='bg-white  static lg:sticky top-0  z-30'>
+                    <div className='container px-4 mx-auto '>
+                        <ProductViewType smallFilter={smallFilter} setSmallFilter={setSmallFilter} toggle={toggle} setToggle={setToggle} layout={layout} setLayout={setLayout} />
 
-                    <ProductViewType toggle={toggle} setToggle={setToggle} layout={layout} setLayout={setLayout} />
+                    </div>
+               </div>
+
+                <div className='container px-4 mx-auto relative pt-8'>
+
 
                     <div className='block lg:flex gap-5'>
-                       
-                        <Filter toggle={toggle} setToggle={setToggle } />
 
-                        <div className={`grid ${layout === "grid" ? `grid-cols-1 md:grid-cols-2 ${toggle ? "lg:grid-cols-3" : "lg:grid-cols-4"}` : "grid-cols-1"} gap-6 static`}>
+                        <Filter smallFilter={smallFilter} setSmallFilter={setSmallFilter} toggle={toggle} setToggle={setToggle} />
+
+                        <div className={`grid w-full ${layout === "grid" ? `grid-cols-1 md:grid-cols-2 ${toggle ? "lg:grid-cols-3" : "lg:grid-cols-4"}` : "grid-cols-1"} gap-6 static`}>
                             {
                                 layout === "grid" && products.map((product) => <ProductGridCard key={product.id} product={product} />)
                             }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ByColor from './ByColor';
 import Categories from './Categories';
 import DiscountOffer from './DiscountOffer';
@@ -7,7 +7,7 @@ import ProductBrand from './ProductBrand';
 import RatingItem from './RatingItem';
 import SMDeviceFilter from './SMDeviceFilter';
 
-const Filter = ({ toggle, setToggle }: any) => {
+const Filter = ({ toggle, setToggle, smallFilter, setSmallFilter  }: any) => {
     return (
         <>
             <div
@@ -24,7 +24,7 @@ const Filter = ({ toggle, setToggle }: any) => {
 
                 </div>
             </div>
-            <SMDeviceFilter smallFilter={toggle} setSmallFilter={setToggle} />
+            <SMDeviceFilter smallFilter={smallFilter} setSmallFilter={setSmallFilter} />
         </>
     );
 };

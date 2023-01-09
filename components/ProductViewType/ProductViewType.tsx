@@ -2,11 +2,11 @@ import React from 'react';
 import { ListBulletIcon, AdjustmentsHorizontalIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import { Squares2X2Icon } from '@heroicons/react/24/solid';
 
-const ProductViewType = ({ layout, setLayout, toggle, setToggle }: any) => {
+const ProductViewType = ({ layout, setLayout, toggle, setToggle, smallFilter,  setSmallFilter  }: any) => {
 
     return (
         // sticky top - 0
-        <div className='flex justify-between flex-col lg:flex-row py-7 gap-5 items-start static lg:sticky top-0 bg-white z-30'>
+        <div className='flex justify-between flex-col lg:flex-row py-7 gap-5 items-start'>
             <div>
                 <h2 className='text-[#151875] text-xl font-bold  josefin-font leading-8'>Ecommerce Acceories & Fashion item </h2>
                 <p className='text-xs '>About 9,620 results (0.62 seconds)</p>
@@ -45,7 +45,13 @@ const ProductViewType = ({ layout, setLayout, toggle, setToggle }: any) => {
                 <div className="flex gap-2">
                     <button
                         onClick={() => setToggle(!toggle)}
-                        className={` ${toggle ? "bg-pink-600 text-white " : "bg-gray-100 text-black"} border px-2 py-2 rounded-md flex gap-1 items-center`}>
+                        className={` ${toggle ? "bg-pink-600 text-white " : "bg-gray-100 text-black"} border px-2 py-2 rounded-md  gap-1 items-center hidden lg:flex`}>
+                        <AdjustmentsHorizontalIcon width={15} />
+                        Filter
+                    </button>
+                    <button
+                        onClick={() => setSmallFilter(!smallFilter)}
+                        className={` ${smallFilter ? "bg-pink-600 text-white " : "bg-gray-100 text-black"} border px-2 py-2 rounded-md  gap-1 items-center flex lg:hidden`}>
                         <AdjustmentsHorizontalIcon width={15} />
                         Filter
                     </button>

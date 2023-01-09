@@ -2,6 +2,7 @@ import React from 'react';
 import { ShoppingCartIcon, HeartIcon, MagnifyingGlassPlusIcon } from '@heroicons/react/24/outline';
 import ActiveRating from '../ActiveRating/ActiveRating';
 import InActiveRating from '../InActiveRating/InActiveRating';
+import Link from 'next/link';
 
 
 const ProductGridCard = ({ product }: any) => {
@@ -36,7 +37,10 @@ const ProductGridCard = ({ product }: any) => {
             </div>
             <div className='py-4 px-5 bg-white flex justify-between ' >
                 <div className='flex flex-col gap-2'>
-                    <h2 className=' hover:text-[#FB2E86] hover:underline text-[#151875] lato-font font-bold text-[16px]  '>{product.name}</h2>
+                    <Link href={`product/${product.id}`} legacyBehavior>
+                        <a className=' hover:text-[#FB2E86] hover:underline text-[#151875] lato-font font-bold text-[16px]  '>{product.name}</a>
+                    </Link>
+                    
                     <div className='flex'>
                         <ActiveRating />
                         <ActiveRating />

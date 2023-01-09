@@ -11,31 +11,32 @@ import Banner from '../Promotional/Banner';
 const HeaderBanner = () => {
     return (
         <section className='bg-[#F2F0FF] '>
-            <div className='container pl-4 mx-auto'>
 
 
-                <Swiper
-                    slidesPerView={1}
-                    spaceBetween={40}
-                    slidesPerGroup={1}
-                    speed={1500}
-                    loop={true}
-                    autoplay={{
-                        delay: 2500,
-                        waitForTransition: true,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true
 
-                    }}
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={40}
+                slidesPerGroup={1}
+                speed={1500}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    waitForTransition: true,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
 
-                    pagination={{
-                        clickable: true,
-                        bulletActiveClass: "banner_paginate_bullet_active",
-                        bulletClass: "banner_paginate_bullet"
-                    }}
-                    modules={[Autoplay, Pagination]}
-                    className="header_banner"
-                >
+                }}
+
+                pagination={{
+                    clickable: true,
+                    bulletActiveClass: "banner_paginate_bullet_active",
+                    bulletClass: "banner_paginate_bullet"
+                }}
+                modules={[Autoplay, Pagination]}
+                className="header_banner"
+            >
+               
                     <SwiperSlide >
                         <Banner />
                     </SwiperSlide>
@@ -45,13 +46,9 @@ const HeaderBanner = () => {
                     <SwiperSlide >
                         <Banner />
                     </SwiperSlide>
+            </Swiper>
 
 
-
-
-                </Swiper>
-
-            </div>
         </section>
     );
 };
