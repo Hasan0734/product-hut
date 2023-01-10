@@ -1,11 +1,12 @@
 import { HeartIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Rating from '../../components/Filter/Rating';
 import Layout from '../../components/Layout/Layout';
 import PageLocation from '../../components/PageLocation/PageLocation';
 
 const index = () => {
+    const [image, setImage] = useState("/assets/product/Rectangle 138.png")
     return (
         <Layout>
 
@@ -35,34 +36,28 @@ const index = () => {
                             <div className='grid grid-cols-1  md:grid-cols-2 gap-5'>
                                 <div className='flex flex-col md:flex-row gap-3'>
                                     <div className='h-full md:h-[450px] bg-pink-100 w-full 
-                                    md:w-[280px] md:overflow-y-scroll  overflow-x-scroll
-                                     scrollbar-thin scrollbar-track-slate-800 scrollbar-thumb-slate-100'>
+                                    md:w-[220px] overflow-y-scroll md:overflow-y-scroll 
+                                     overflow-x-hidden md:overflow-x-scroll  scrollbar-thin scrollbar-track-[#cfc1ff76]
+                                      scrollbar-thumb-[#fe78e188] scrollbar-rounded-md
+                                    '>
 
-                                        <div className='flex flex-row'>
-                                            <div className='w-[270px] h-[220px] p-3 flex-auto'>
-                                                <img className='w-full h-full rounded-md' src="/assets/product/Rectangle 134.png" alt="product images" />
+                                        <div className='flex  md:flex-col flex-row w-full overflow-y-scroll md:overflow-y-auto'>
+                                            <div className='min-w-[210px] max-w-[210px] h-[210px] p-3 flex-shrink-2'>
+                                                <img onClick={() => setImage("/assets/product/Rectangle 134.png")} className='w-full h-full rounded-md' src="/assets/product/Rectangle 134.png" alt="product images" />
                                             </div>
-                                            <div className='w-[270px] h-[220px] p-3'>
-                                                <img className='w-full h-full rounded-md' src="/assets/product/Rectangle 137.png" alt="product images" />
+                                            <div className='min-w-[210px] max-w-[210px] h-[210px] p-3 flex-shrink-2'>
+                                                <img onClick={() => setImage("/assets/product/Rectangle 136.png")} className='w-full h-full rounded-md' src="/assets/product/Rectangle 136.png" alt="product images" />
                                             </div>
-                                            <div className='w-[270px] h-[220px] p-3'>
-                                                <img className='w-full h-full rounded-md' src="/assets/product/Rectangle 136.png" alt="product images" />
+                                            <div className='min-w-[210px] max-w-[210px] h-[210px] p-3 flex-shrink-2'>
+                                                <img onClick={() => setImage("/assets/product/Rectangle 137.png")} className='w-full h-full rounded-md' src="/assets/product/Rectangle 137.png" alt="product images" />
                                             </div>
-                                            <div className='w-[270px] h-[220px] p-3'>
-                                                <img className='w-full h-full rounded-md' src="/assets/product/Rectangle 138.png" alt="product images" />
-                                            </div>
-                                            <div className='w-[270px] h-[220px] p-3'>
-                                                <img className='w-full h-full rounded-md' src="/assets/product/Rectangle 138.png" alt="product images" />
-                                            </div>
-                                            <div className='w-[270px] h-[220px] p-3'>
-                                                <img className='w-full h-full rounded-md' src="/assets/product/Rectangle 138.png" alt="product images" />
-                                            </div>
-                                       </div>
+                                         
+                                        </div>
 
 
                                     </div>
-                                    <div className='h-[350px] md:h-[450px]'>
-                                        <img className='w-full h-full' src="/assets/product/Rectangle 138.png" alt="product images" />
+                                    <div className='h-[350px] md:h-[450px] w-full sm:w-[320px]'>
+                                        <img className='w-full h-full' src={image} alt="product images" />
                                     </div>
                                 </div>
                                 <div>
