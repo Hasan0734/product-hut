@@ -5,12 +5,12 @@ const BottomFooter = () => {
     return (
         <div className='bg-[#E7E4F8] py-4 '>
             <div className='container mx-auto max-w-7xl px-4 sm:px-16'>
-                <div className='sm:flex justify-between'>
+                <div className='block sm:flex justify-between items-center'>
                     <p className='text-[#9DA0AE] lato-font text-sm font-semibold'>
                         { new Date().getFullYear()} ©Product-Hut - All Rights Reserved
                     </p>
-                    <ul className='flex gap-x-3 mt-3 sm:mt-0'>
-                        <li>
+                    <ul className='flex gap-x-3  sm:mt-0 items-center'>
+                        <li className="flex items-center">
                             <Link href={"https://facebook.com"} legacyBehavior>
                                 <a className="bg-[#151875] p-[6px] inline-block rounded-full">
                                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ const BottomFooter = () => {
                                 </a>
                             </Link>
                         </li>
-                        <li>
+                        <li className="flex items-center">
                             <Link href={"https://facebook.com"} legacyBehavior>
                                 <a className="bg-[#151875] p-[6px] inline-block rounded-full">
                                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@ const BottomFooter = () => {
                                 </a>
                             </Link>
                         </li>
-                        <li>
+                        <li className="flex items-center">
                             <Link href={"https://facebook.com"} legacyBehavior>
                                 <a className="bg-[#151875] p-[6px] inline-block rounded-full">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -32,32 +32,31 @@ const index = () => {
             <main>
                 <section className='py-10 bg-white'>
                     <div className='container px-4 mx-auto'>
-                        <div className='rounded-sm drop-shadow-[0_0_25px_10px_rgba(0,0,0,0.05)] p-4'>
-                            <div className='grid grid-cols-1  md:grid-cols-2 gap-5'>
-                                <div className='flex flex-col md:flex-row gap-3'>
-                                    <div className='h-full md:h-[450px] bg-pink-100 w-full 
-                                    md:w-[220px] overflow-y-scroll md:overflow-y-scroll 
-                                     overflow-x-hidden md:overflow-x-scroll  scrollbar-thin scrollbar-track-[#cfc1ff76]
+                        <div className='rounded-sm drop-shadow-[0_0_25px_10px_rgba(0,0,0,0.05)] p-0 md:p-4'>
+                            <div className='grid grid-cols-1  lg:grid-cols-2 gap-5'>
+                                <div className='flex flex-col lg:flex-row gap-5'>
+                                    <div className='order-2 lg:order-1 h-auto lg:h-[450px] bg-pink-100 w-full 
+                                    lg:w-[220px] overflow-y-scroll md:overflow-y-scroll 
+                                     overflow-x-hidden md:overflow-x-scroll 
+                                      scrollbar-thin scrollbar-track-[#cfc1ff76]
                                       scrollbar-thumb-[#fe78e188] scrollbar-rounded-md
                                     '>
 
-                                        <div className='flex  md:flex-col flex-row w-full overflow-y-scroll md:overflow-y-auto'>
+                                        <div className='flex  lg:flex-col flex-row w-full overflow-y-scroll md:overflow-y-auto'>
                                             <div className='min-w-[210px] max-w-[210px] h-[210px] p-3 flex-shrink-2'>
-                                                <img onClick={() => setImage("/assets/product/Rectangle 134.png")} className='w-full h-full rounded-md' src="/assets/product/Rectangle 134.png" alt="product images" />
+                                                <img
+                                                    onClick={() => setImage("/assets/product/Rectangle 134.png")}
+                                                    className='cursor-pointer w-full h-full rounded-md'
+                                                    src="/assets/product/Rectangle 134.png"
+                                                    alt="product images" />
                                             </div>
-                                            <div className='min-w-[210px] max-w-[210px] h-[210px] p-3 flex-shrink-2'>
-                                                <img onClick={() => setImage("/assets/product/Rectangle 136.png")} className='w-full h-full rounded-md' src="/assets/product/Rectangle 136.png" alt="product images" />
-                                            </div>
-                                            <div className='min-w-[210px] max-w-[210px] h-[210px] p-3 flex-shrink-2'>
-                                                <img onClick={() => setImage("/assets/product/Rectangle 137.png")} className='w-full h-full rounded-md' src="/assets/product/Rectangle 137.png" alt="product images" />
-                                            </div>
-                                         
+                                  
+
                                         </div>
-
-
                                     </div>
-                                    <div className='h-[350px] md:h-[450px] w-full sm:w-[320px]'>
-                                        <img className='w-full h-full' src={image} alt="product images" />
+                                    <div className='order-1  flex items-center justify-center lg:order-2 h-[350px] md:h-[450px] 
+                                    w-full lg:w-[450px]'>
+                                        <img className='w-full sm:w-3/5 lg:w-full h-full' src={image} alt="product images" />
                                     </div>
                                 </div>
                                 <div>
