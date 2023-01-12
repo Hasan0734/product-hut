@@ -1,6 +1,5 @@
 import React from 'react';
-import ActiveRating from '../ActiveRating/ActiveRating';
-import Rating from './Rating';
+import Rating from '../Rating/Rating';
 
 const ratings = [
     { id: 1, rate: 5 },
