@@ -24,7 +24,7 @@ const ProductImages = () => {
             </div>
             <div className='order-1  flex items-center justify-center 
                     xl:order-2 h-[350px] md:h-[450px]  w-full xl:w-[450px]'>
-                <img className='w-full sm:w-3/5 lg:w-3/4 h-full' src={image} alt="product images" />
+                <img className='w-full sm:w-3/5 lg:w-3/4 xl:w-full h-full' src={image} alt="product images" />
             </div>
         </div>
     );
