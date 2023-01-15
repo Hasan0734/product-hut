@@ -1,11 +1,12 @@
-import { XMarkIcon } from '@heroicons/react/24/solid';
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout/Layout';
 import PageLocation from '../components/PageLocation/PageLocation';
+import { Minus, Plus, X } from 'react-feather';
 
 const index = () => {
+    const [quantiy, setQuanity] = useState(1)
     return (
         <>
             <Head>
@@ -35,26 +36,25 @@ const index = () => {
                 <main>
                     <section className='py-20'>
                         <div className='container px-4 mx-auto'>
-                            <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
+                            <div className='grid grid-cols-1 lg:grid-cols-3 gap-14'>
                                 <div className='col-span-2'>
                                     <table className='w-full'>
                                         <thead>
                                             <tr>
-                                                <td className='josefin-font text-xl font-bold text-[#1D3178]'>Product</td>
-                                                <td className='josefin-font text-xl font-bold text-[#1D3178]'>Price</td>
-                                                <td className='josefin-font text-xl font-bold text-[#1D3178]'>Quantity</td>
-                                                <td className='josefin-font text-xl font-bold text-[#1D3178]'>Total</td>
+                                                <th className='josefin-font text-xl font-bold text-[#1D3178]  pb-6 text-start '>Product</th>
+                                                <th className='josefin-font text-xl font-bold text-[#1D3178] pb-6 text-start '>Price</th>
+                                                <th className='josefin-font text-xl font-bold text-[#1D3178] pb-6 text-center '>Quantity</th>
+                                                <th className='josefin-font text-xl font-bold text-[#1D3178] pb-6 text-center '>Total</th>
                                             </tr>
                                         </thead>
                                         <tbody className="">
+
                                             <tr className='border-b mt-5'>
-                                                <td className='flex pt-8 gap-4'>
+                                                <td className='flex gap-4 pt-4'>
                                                     <div className='w-[83px] h-[87px] py-2 relative'>
                                                         <img className='w-full h-full' src="/assets/products/1.png" alt="" />
                                                         <div className='absolute top-0 right-0'>
-                                                            <button className='bg-black text-white rounded-lg p-[3px]'>
-                                                                <XMarkIcon width={18} />
-                                                            </button>
+                                                            <X className='text-white bg-black rounded-full p-[3px] cursor-pointer' width={24} strokeWidth={3} />
                                                         </div>
                                                     </div>
                                                     <div>
@@ -63,112 +63,41 @@ const index = () => {
                                                                 Ut diam consequat
                                                             </a>
                                                         </Link>
-                                                        <p className='josefin- josefin-font text-sm'>Color: <span className='text-xl '>Brown</span></p>
-                                                        <p className='josefin-font text-sm'>Size: <span className='text-xl '>XL</span></p>
+                                                        <p className='josefin- josefin-font text-sm'>Color: <span className='text-gray-800'>Brown</span></p>
+                                                        <p className='josefin-font text-sm'>Size: <span className='text-gray-800'>XL</span></p>
                                                     </div>
                                                 </td>
-                                                <td className='pt-8'>
+                                                <td className=' pt-4'>
                                                     $25.00
                                                 </td>
-                                                <td className='pt-8'>
-                                                    1000
+                                                <td className='text-center pt-4'>
+                                                    <div className='flex items-center justify-center'>
+                                                        <button
+                                                            onClick={() => setQuanity(quantiy + 1)} className='bg-[#E7E7EF]'>
+                                                            <Plus />
+                                                        </button>
+                                                        <input className='w-14 text-[#BEBFC2] bg-[#F0EFF2] text-xl' value={quantiy} type="number" />
+                                                        <button
+                                                            onClick={() => setQuanity(quantiy - 1)}
+                                                            className='bg-[#E7E7EF]'>
+                                                            <Minus />
+                                                        </button>
+                                                    </div>
                                                 </td>
-                                                <td className='pt-8'>
+                                                <td className='text-center pt-4'>
                                                     1000
                                                 </td>
                                             </tr>
-                                            <tr className='border-b mt-5'>
-                                                <td className='flex pt-8 gap-4'>
-                                                    <div className='w-[83px] h-[87px] py-2 relative'>
-                                                        <img className='w-full h-full' src="/assets/products/1.png" alt="" />
-                                                        <div className='absolute top-0 right-0'>
-                                                            <button className='bg-black text-white rounded-lg p-[3px]'>
-                                                                <XMarkIcon width={18} />
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <Link href={"/"} legacyBehavior>
-                                                            <a className='text-xl josefin-font text-black  font-semibold hover:underline cursor-pointer'>
-                                                                Ut diam consequat
-                                                            </a>
-                                                        </Link>
-                                                        <p className='josefin- josefin-font text-sm'>Color: <span className='text-xl '>Brown</span></p>
-                                                        <p className='josefin-font text-sm'>Size: <span className='text-xl '>XL</span></p>
-                                                    </div>
-                                                </td>
-                                                <td className='pt-8'>
-                                                    $25.00
-                                                </td>
-                                                <td className='pt-8'>
-                                                    1000
-                                                </td>
-                                                <td className='pt-8'>
-                                                    1000
-                                                </td>
-                                            </tr>
-                                            <tr className='border-b mt-5'>
-                                                <td className='flex pt-8 gap-4'>
-                                                    <div className='w-[83px] h-[87px] py-2 relative'>
-                                                        <img className='w-full h-full' src="/assets/products/1.png" alt="" />
-                                                        <div className='absolute top-0 right-0'>
-                                                            <button className='bg-black text-white rounded-lg p-[3px]'>
-                                                                <XMarkIcon width={18} />
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <Link href={"/"} legacyBehavior>
-                                                            <a className='text-xl josefin-font text-black  font-semibold hover:underline cursor-pointer'>
-                                                                Ut diam consequat
-                                                            </a>
-                                                        </Link>
-                                                        <p className='josefin- josefin-font text-sm'>Color: <span className='text-xl '>Brown</span></p>
-                                                        <p className='josefin-font text-sm'>Size: <span className='text-xl '>XL</span></p>
-                                                    </div>
-                                                </td>
-                                                <td className='pt-8'>
-                                                    $25.00
-                                                </td>
-                                                <td className='pt-8'>
-                                                    1000
-                                                </td>
-                                                <td className='pt-8'>
-                                                    1000
-                                                </td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
-                                    {/* <div>
-                                        <ul className='flex justify-between gap-3'>
-                                            <li className='josefin-font text-xl font-bold text-[#1D3178]'>Product</li>
-                                            <li className='josefin-font text-xl font-bold text-[#1D3178] '>Price</li>
-                                            <li className='josefin-font text-xl font-bold text-[#1D3178]'>Quantity</li>
-                                            <li className='josefin-font text-xl font-bold text-[#1D3178] '>Total</li>
-                                        </ul>
-                                    </div>
-                                    <div className='flex justify-between gap-3'>
-                                        <div className='flex justify-between'>
-                                            <div>
-                                                <img src="" alt="" />
-                                            </div>
-                                            <div>
-                                                <h2 className='text-sm font-semibold'>Ut diam consequat</h2>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            545 
-                                        </div>
-                                        <div>
-                                        65656
-                                        </div>
-                                        <div>
-                                            45454
-                                        </div>
-                                    </div> */}
+
                                 </div>
                                 <div className='col-span-1'>
-                                    <h2 className='josefin-font text-xl font-bold text-[#1D3178] text-center'>Cart Totals</h2>
+                                    <div className='bg-gray-200 p-3 h-full'>
+                                        <h2 className='josefin-font text-xl font-bold text-[#1D3178] text-center'>Cart Totals</h2>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
