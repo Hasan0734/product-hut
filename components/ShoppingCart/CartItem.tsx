@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { X } from 'react-feather';
 import Quantity from './Quantity';
 
-const CartItem = () => {
+const CartItem = ({ product }: any) => {
+    const [quantity, setQuantity] = useState(1);
 
     return (
         <tr className='border-b mt-5'>
-            <td className='flex gap-4 pt-4'>
+            <td className='flex gap-4 pt-4 max-w-xs'>
                 <div className='w-[83px] h-[87px] py-2 relative'>
-                    <img className='w-full h-full' src="/assets/products/1.png" alt="" />
+                    <img className='w-full h-full' src={product.image} alt="" />
                     <div className='absolute top-0 right-0'>
                         <X className='text-white bg-black rounded-full p-[3px] cursor-pointer' width={24} strokeWidth={3} />
                     </div>
@@ -17,7 +18,7 @@ const CartItem = () => {
                 <div>
                     <Link href={"/"} legacyBehavior>
                         <a className='text-xl josefin-font text-black  font-semibold hover:underline cursor-pointer'>
-                            Ut diam consequat
+                            {product.name}
                         </a>
                     </Link>
                     <p className='josefin- josefin-font text-sm'>Color: <span className='text-gray-800'>Brown</span></p>
@@ -25,13 +26,13 @@ const CartItem = () => {
                 </div>
             </td>
             <td className=' pt-4'>
-                $25.00
+                ${product.price.toFixed(2)}
             </td>
             <td className='text-center pt-4'>
-               <Quantity/>
+                <Quantity quantity={quantity} setQuantity={setQuantity} />
             </td>
             <td className='text-center pt-4'>
-                1000
+                ${(product.price * quantity).toFixed(2)}
             </td>
         </tr>
     );

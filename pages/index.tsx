@@ -9,10 +9,8 @@ import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';
 import Layout from '../components/Layout/Layout';
 import LeatestProducts from '../components/LeatestProducts/LeatestProducts';
-import Navbar from '../components/Navbar/Navbar';
 import ShopexOffer from '../components/ShopexOffer/ShopexOffer';
 import TopCategories from '../components/TopCategries/TopCategories';
-import TopHeader from '../components/TopHeader/TopHeader';
 import TrendingProducts from '../components/TrendingProducts/TrendingProducts';
 import UniqueProduct from '../components/UniqueProduct/UniqueProduct';
 
