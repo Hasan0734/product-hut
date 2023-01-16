@@ -25,9 +25,9 @@ const Cart = () => {
                 <h2 className='josefin-font text-xl font-bold text-[#1D3178] text-center'>Calculate Shopping</h2>
                 <div className='bg-[#F4F4FC] p-8 mt-4'>
                     <div>
-                        <input className='w-full bg-[#F4F4FC] border-b-2 py-1 my-2 text-sm focus:outline-none' type="text" placeholder="Country" />
-                        <input className='w-full bg-[#F4F4FC] border-b-2 py-1 my-3 text-sm focus:outline-none' type="text" placeholder="Address" />
-                        <input className='w-full bg-[#F4F4FC] border-b-2 py-1 my-4 text-sm focus:outline-none' type="text" placeholder="Post Code" />
+                        <input className='w-full bg-[#F4F4FC] border-b-2 py-1 my-2 text-sm focus:outline-none josefi-font' type="text" placeholder="Country" />
+                        <input className='w-full bg-[#F4F4FC] border-b-2 py-1 my-3 text-sm focus:outline-none josefi-font' type="text" placeholder="Address" />
+                        <input className='w-full bg-[#F4F4FC] border-b-2 py-1 my-4 text-sm focus:outline-none josefi-font' type="text" placeholder="Post Code" />
                     </div>
                     <button className="bg-[#FB2E86] px-4 py-2 text-white rounded text-sm mt-4">Calculate Shiping</button>
                 </div>
