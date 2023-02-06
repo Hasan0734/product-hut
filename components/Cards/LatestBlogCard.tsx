@@ -5,7 +5,7 @@ const LatestBlogCard = ({ blog }: any) => {
     return (
         <>
             <div className="bg-white drop-shadow-[0_8px_40px_rgba(49,32,138,0.05)] rounded-md blog_card">
-                <img className='rounded-lg w-full  h-[255px] lg:h-[200px]' src={blog.image} alt="Shoes" />
+                <img className='rounded-lg w-full  h-[260px] ' src={blog.image} alt="Shoes" />
                 <div className='p-3 py-5'>
                     <div className='flex mb-5 gap-x-7'>
                         <p className='josefin-font text-sm font-semibold items-center flex gap-x-2 text-[#151875]'>

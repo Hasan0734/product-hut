@@ -22,7 +22,8 @@ const LoginForm = () => {
                     <button className='bg-[#FB2E86] py-2 w-full text-white text-sm lato-font rounded'>Sign in</button>
                 </div>
                 <p className='text-center lato-font text-sm font-normal text-[#9096B2] mt-3'>
-                    <span>Don’t have an Account?</span><Link href="/forgate-pass" legacyBehavior>
+                    <span>Don’t have an Account?</span> {" "}
+                    <Link href="/signup" legacyBehavior>
                         <a className=''>Create account</a>
                     </Link>
                 </p>

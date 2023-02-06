@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import DiscountItems from '../components/DiscountItems/DiscountItems';
-import Drawer from '../components/Drawer/Drawer';
 import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
-import Footer from '../components/Footer/Footer';
 import HeaderBanner from '../components/HeaderBanner/HeaderBanner';
 import LatestBlog from '../components/LatestBlog/LatestBlog';
 import LatestUpdateBySubscribe from '../components/LatestUpdateBySubscribe/LatestUpdateBySubscribe';

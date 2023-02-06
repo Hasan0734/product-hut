@@ -1,15 +1,15 @@
 import React from 'react';
-import LoginForm from '../components/Forms/LoginForm';
+import SignupForm from '../components/Forms/SignupForm';
 import Layout from '../components/Layout/Layout';
 import PageLocation from '../components/PageLocation/PageLocation';
 
-const Login = () => {
+const Register = () => {
     return (
         <Layout>
             <PageLocation  >
                 <div>
                     <h2 className='josefin-font text-[#101750] text-xl md:text-3xl font-bold leading-10'>
-                        My Account
+                        Create a new Account
                     </h2>
                     <ul className='flex gap-x-2'>
                         <li className='text-black text-sm '>
@@ -27,7 +27,7 @@ const Login = () => {
 
             <section className='py-20 lg:py-40 bg-white'>
                 <div className='container mx-auto px-4 flex justify-center items-center'>
-                    <LoginForm />
+                    <SignupForm />
                 </div>
             </section>
 
@@ -36,4 +36,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
